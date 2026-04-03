@@ -12,6 +12,13 @@ let playbackTimer = null;
 let selectedSpeed = 'normal';
 let baseDelay = 4500;
 
+// State variables for scroll tracking
+let userPausedLive = false;
+let unseenCount = 0;
+let lastScrollTop = 0;
+let followScrollToken = 0;
+let suppressScrollListener = false;
+
 // DOM Elements
 const chat = document.getElementById('chat');
 const participantCountEl = document.getElementById('participant-count');
