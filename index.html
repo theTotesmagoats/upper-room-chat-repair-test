@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Upper Room Chat</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="app">
+        <div class="header">
+            <h1>The Upper Room Chat</h1>
+            <div class="subtitle" id="participant-count">Loading participants...</div>
+        </div>
+
+        <div class="controls" id="speed-controls">
+            <!-- Speed controls will be populated by JavaScript -->
+        </div>
+
+        <div class="scripture-banner hidden" id="scripture-banner" aria-live="polite" aria-atomic="true">
+            <div class="scripture-banner-tag" id="scripture-banner-tag"></div>
+            <div class="scripture-banner-text" id="scripture-banner-text"></div>
+            <div class="scripture-banner-citation" id="scripture-banner-citation"></div>
+        </div>
+
+        <div class="chat-container" id="chat" aria-live="polite" aria-label="Upper Room chat playback">
+            <div class="loading-state">
+                <p>Loading the Upper Room experience...</p>
+            </div>
+            <div id="bottom-sentinel" aria-hidden="true"></div>
+        </div>
+    </div>
+
+    <button class="new-indicator" id="new-indicator" type="button" aria-label="Jump to new messages">New messages below</button>
+    <button class="scroll-btn" id="scroll-btn" aria-label="Jump to latest message">↓</button>
+    <div class="bio-popover" id="bio-popover" role="dialog" aria-live="polite" aria-hidden="true">
+        <div class="bio-kicker">Upper Room Companion</div>
+        <div class="bio-name" id="bio-name"></div>
+        <div class="bio-role" id="bio-role"></div>
+        <div class="bio-line" id="bio-summary"></div>
+        <div class="bio-line" id="bio-relation"></div>
+        <div class="bio-line" id="bio-why"></div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
